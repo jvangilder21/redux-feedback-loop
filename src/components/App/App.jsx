@@ -33,16 +33,8 @@ function App() {
         <Route path="/feeling" component={Feeling} />
         <Route path="/understanding" component={Understanding} />
         <Route path="/support" component={Support} />
-
-      
+        <Route path="/comments" component={Comments} />
     
-  
-      <ul>
-        <li>
-          <Link to="/comments">Comments Page</Link>
-        </li>
-      </ul>
-     
 
 
       </Router>

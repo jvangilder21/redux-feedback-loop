@@ -15,8 +15,8 @@ function Support() {
     const home = () => {
         history.push('/')
     }
-    const comment = () => {
-        history.push('/comment')
+    const comments = () => {
+        history.push('/comments')
     }
 
     useEffect(() => {
@@ -45,7 +45,7 @@ function Support() {
 
                 <Button 
                     variant='contained'
-                    onClick={comment}
+                    onClick={comments}
                     >NEXT</Button>
             </div>
         )
