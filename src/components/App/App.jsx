@@ -25,16 +25,14 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
+      </header>
 
       <main>
       <Router>
         <Route exact path="/" component={Home} />
-        
-      <ul>
-        <li>
-          <Link to="/feeling">Feelings Page</Link>
-        </li>
-      </ul>
+        <Route path="/feeling" component={Feeling} />
+
+      
       <ul>
         <li>
           <Link to="/understanding">Understanding Page</Link>
@@ -56,7 +54,14 @@ function App() {
       </Router>
       </main>
 
-      </header>
+      
+
+    <div>
+
+    
+    
+    </div>
+
     </div>
   );
 }

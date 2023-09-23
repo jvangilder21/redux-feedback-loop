@@ -1,9 +1,25 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom"
+
+import axios from 'axios';
+
+import Button from '@mui/material/Button';
+
+
 
 function Feeling() {
 
     const feelingRating = useSelector(store => store.feelingRating);
+
+    const history = useHistory();
+    
+    const home = () => {
+        history.push('/')
+    }
+    const understanding = () => {
+        history.push('/understanding')
+    }
 
     useEffect(() => {
         fetchFeelingRating();
@@ -14,7 +30,7 @@ function Feeling() {
             feelingRating(response.data);
         }).catch(error => {
             console.log('error in fetch feelingRating', error);
-            alert('something went wrong');
+            // alert('something went wrong');
           })
     }
 
@@ -22,7 +38,17 @@ function Feeling() {
             <div>
                 <h2>Feelings</h2>
 
-                <p>Feeling Rating {feelingRating}</p>
+                <p>Feeling Rating: {feelingRating}</p>
+
+                <Button 
+                    variant='contained'
+                    onClick={home}
+                    >HOME</Button>
+
+                <Button 
+                    variant='contained'
+                    onClick={understanding}
+                    >NEXT</Button>
             </div>
         )
 }
