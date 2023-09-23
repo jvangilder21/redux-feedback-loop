@@ -7,7 +7,7 @@ function Home () {
     
     const history = useHistory();
     
-    const Feeling = () => {
+    const feeling = () => {
         history.push('/Feeling')
     }
 
@@ -18,7 +18,7 @@ function Home () {
                 <br/>
                 <Button 
                     variant='contained'
-                    onClick={Feeling}
+                    onClick={feeling}
                     >LEAVE FEEDBACK HERE</Button>
             </div>
 
