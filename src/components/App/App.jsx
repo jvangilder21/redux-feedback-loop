@@ -32,14 +32,11 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/feeling" component={Feeling} />
         <Route path="/understanding" component={Understanding} />
+        <Route path="/support" component={Support} />
 
       
     
-      <ul>
-        <li>
-          <Link to="/support">Support Page</Link>
-        </li>
-      </ul>
+  
       <ul>
         <li>
           <Link to="/comments">Comments Page</Link>
