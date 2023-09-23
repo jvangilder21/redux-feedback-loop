@@ -19,10 +19,20 @@ const feelingRating = (state = 0, action) => {
     return state;
 }
 
+const understandingRating = (state = 0, action) => {
+    console.log("Hey! I'm the feelings reducer", state);
+
+    if(action.type === 'ADD_UNDERSTANDING_RATING') {
+        return action.payload;
+    }
+    return state;
+}
+
 // Combine Reducers
 const storeInstance = createStore(
     combineReducers({
       feelingRating,
+      understandingRating,
     }),
     applyMiddleware(logger)
   );
