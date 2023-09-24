@@ -13,7 +13,7 @@ function Home () {
 
         return (     
             <div>
-                <h2>HELLO! Please leave feedback!</h2>
+                <h2>HELLO! Please your leave feedback!</h2>
                 <br/>
                 <br/>
                 <Button 

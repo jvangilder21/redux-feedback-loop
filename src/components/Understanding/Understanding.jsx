@@ -8,9 +8,15 @@ import Button from '@mui/material/Button';
 
 function Understanding() {
 
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    //Defining a local state to store the user's feeling rating
+    const [newUnderstandingRating , setNewUnderstandingRating] = useState('');
+
+    // Don't think this is needed on this page.
     const understandingRating = useSelector(store => store.understandingRating);
 
-    const history = useHistory();
     
     const home = () => {
         history.push('/')

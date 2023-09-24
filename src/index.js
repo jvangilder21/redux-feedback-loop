@@ -14,13 +14,14 @@ const feelingRating = (state = 0, action) => {
     console.log("Hey! I'm the feelings reducer", state);
 
     if(action.type === 'ADD_FEELING_RATING') {
+        // console.log(`THE FEELING RATING WAS ${action.payload}`);
         return action.payload;
     }
     return state;
 }
 
 const understandingRating = (state = 0, action) => {
-    console.log("Hey! I'm the feelings reducer", state);
+    console.log("Hey! I'm the understanding reducer", state);
 
     if(action.type === 'ADD_UNDERSTANDING_RATING') {
         return action.payload;
@@ -29,7 +30,7 @@ const understandingRating = (state = 0, action) => {
 }
 
 const supportRating = (state = 0, action) => {
-    console.log("Hey! I'm the feelings reducer", state);
+    console.log("Hey! I'm the support reducer", state);
 
     if(action.type === 'ADD_SUPPORT_RATING') {
         return action.payload;
@@ -38,7 +39,7 @@ const supportRating = (state = 0, action) => {
 }
 
 const commentsRating = (state = '', action) => {
-    console.log("Hey! I'm the feelings reducer", state);
+    console.log("Hey! I'm the comments reducer", state);
 
     if(action.type === 'ADD_COMMENTS_RATING') {
         return action.payload;

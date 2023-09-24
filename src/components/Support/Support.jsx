@@ -24,7 +24,7 @@ function Support() {
     }, []);
 
     const fetchSupportRating = () => {
-        axios.get('/understanding').then(response => {
+        axios.get('/support').then(response => {
             supportRating(response.data);
         }).catch(error => {
             console.log('error in fetch feelingRating', error);
