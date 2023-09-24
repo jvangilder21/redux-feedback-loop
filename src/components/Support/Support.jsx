@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
 import Button from '@mui/material/Button';
@@ -11,9 +11,6 @@ function Support() {
 
     //Defining a local state to store the user's feeling rating
     const [newSupportRating , setNewSupportRating] = useState('');
-
-    const supportRating = useSelector(store => store.supportRating);
-
     
 
     function AddingSupportRating () {
@@ -28,17 +25,16 @@ function Support() {
         history.push('/comments')
     }
     
-    const home = () => {
-        history.push('/')
-    }
+    // const home = () => {
+    //     history.push('/')
+    // }
 
         return(
             <div>
                 <h2>Support</h2>
 
-                <p>Support Rating: {supportRating}</p>
 
-                <h2>How are you supported today:</h2>
+                <h2>How well are you being supported today?</h2>
                 <input
                     type="number"
                     min="1"
@@ -46,11 +42,6 @@ function Support() {
                     value={newSupportRating}
                     onChange={event => setNewSupportRating(event.target.value)}
                 />
-
-                <Button 
-                    variant='contained'
-                    onClick={home}
-                    >HOME</Button>
 
                 <Button 
                     variant='contained'

@@ -12,14 +12,14 @@ app.use(express.static('build'));
 /** ---------- EXPRESS ROUTES ---------- **/
 app.post('/review', (req, res) => {
     const feedbackRating = req.body;
-    console.log('Hello');
+    console.log('newReview', feedbackRating);
     const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
         VALUES ($1, $2, $3, $4)`;
     const queryValues = [
-        feedbackRating.feelingRating, 
-        feedbackRating.understandingRating,
-        feedbackRating.supportRating,
-        feedbackRating.commentsRating,
+        feedbackRating.feeling, 
+        feedbackRating.understanding,
+        feedbackRating.support,
+        feedbackRating.comments,
     ];
     pool.query(queryText, queryValues)
     .then(() => { res.sendStatus(201); })
