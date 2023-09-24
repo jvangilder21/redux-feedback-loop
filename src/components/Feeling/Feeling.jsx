@@ -38,7 +38,7 @@ function Feeling() {
             <div>
                 <h2>Feelings</h2>
 
-                <p>Feeling Rating: {feelingRating}</p>
+                <p>How are you feeling today: {feelingRating}</p>
 
                 <Button 
                     variant='contained'

@@ -8,7 +8,7 @@ function Home () {
     const history = useHistory();
     
     const feeling = () => {
-        history.push('/Feeling')
+        history.push('/feeling')
     }
 
         return (     

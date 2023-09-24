@@ -25,7 +25,7 @@ function Comments() {
 
     const fetchComments = () => {
         axios.get('/comments').then(response => {
-            feelingRating(response.data);
+            commentsRating(response.data);
         }).catch(error => {
             console.log('error in fetch comments Rating', error);
             // alert('something went wrong');
