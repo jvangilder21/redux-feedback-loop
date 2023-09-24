@@ -4,8 +4,6 @@ import { useHistory } from "react-router-dom";
 
 import Button from '@mui/material/Button';
 
-
-
 function Feeling() {
 
     const dispatch = useDispatch();
@@ -29,13 +27,15 @@ function Feeling() {
         history.push('/understanding')
     }
 
-    // const home = () => {
-    //     history.push('/')
-    // }
+    const home = () => {
+        history.push('/')
+    }
    
         return(
             <div>
                 <h2>Feelings</h2>
+
+                <p>How are you feeling today {feelingRating}</p>
 
                 <h2>How are you feeling today:</h2>
                 <input
@@ -47,10 +47,10 @@ function Feeling() {
                 
                 />
                     
-                {/* <Button 
+                <Button 
                     variant='contained'
                     onClick={home}
-                    >HOME</Button> */}
+                    >HOME</Button>
 
                 <Button 
                     type="submit"

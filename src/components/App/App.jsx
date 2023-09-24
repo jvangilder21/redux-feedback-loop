@@ -11,12 +11,10 @@ import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 
 // react & redux imports
-import {HashRouter as Router, Route, Link, useHistory} from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 
 function App() {
-
-  // const dispatch = useDispatch();
 
 
   return (
@@ -39,14 +37,6 @@ function App() {
 
       </Router>
       </main>
-
-      
-
-    <div>
-
-    
-    
-    </div>
 
     </div>
   );

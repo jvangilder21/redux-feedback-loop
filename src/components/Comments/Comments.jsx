@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
-
-import axios from 'axios';
 
 import Button from '@mui/material/Button';
 
@@ -30,20 +28,6 @@ function Comments() {
     const home = () => {
         history.push('/')
     }
-   
-
-    // useEffect(() => {
-    //     fetchComments();
-    // }, []);
-
-    // const fetchComments = () => {
-    //     axios.get('/comments').then(response => {
-    //         commentsRating(response.data);
-    //     }).catch(error => {
-    //         console.log('error in fetch comments Rating', error);
-    //         // alert('something went wrong');
-    //       })
-    // }
 
         return(
             <div>

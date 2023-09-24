@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from "react-router-dom";
 
@@ -31,20 +31,6 @@ function Support() {
     const home = () => {
         history.push('/')
     }
-   
-
-    // useEffect(() => {
-    //     fetchSupportRating();
-    // }, []);
-
-    // const fetchSupportRating = () => {
-    //     axios.get('/support').then(response => {
-    //         supportRating(response.data);
-    //     }).catch(error => {
-    //         console.log('error in fetch feelingRating', error);
-    //         // alert('something went wrong');
-    //       })
-    // }
 
         return(
             <div>

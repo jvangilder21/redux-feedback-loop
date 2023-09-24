@@ -28,8 +28,9 @@ function Review() {
         }
         axios.post('/review', newReview)
         .then(response => {
-            history.push('/')
-            }).catch((error) => {
+            history.push('/');
+            })
+            .catch((error) => {
                 console.log(error);
             })
         
