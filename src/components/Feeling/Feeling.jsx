@@ -12,7 +12,7 @@ function Feeling() {
     //Defining a local state to store the user's feeling rating
     const [newFeelingRating , setNewFeelingRating] = useState('');
 
-    const feelingRating = useSelector(store => store.feelingRating);
+    // const feelingRating = useSelector(store => store.feelingRating);
 
 
     function AddingFeelingRating () {
@@ -27,15 +27,13 @@ function Feeling() {
         history.push('/understanding')
     }
 
-    const home = () => {
-        history.push('/')
-    }
+    // const home = () => {
+    //     history.push('/')
+    // }
    
         return(
             <div>
                 <h2>Feelings</h2>
-
-                <p>How are you feeling today {feelingRating}</p>
 
                 <h2>How are you feeling today:</h2>
                 <input
@@ -47,10 +45,10 @@ function Feeling() {
                 
                 />
                     
-                <Button 
+                {/* <Button 
                     variant='contained'
                     onClick={home}
-                    >HOME</Button>
+                    >HOME</Button> */}
 
                 <Button 
                     type="submit"

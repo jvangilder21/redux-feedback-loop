@@ -11,7 +11,7 @@ function Comments() {
 
     //Defining a local state to store the user's feeling rating
     const [newCommentsRating , setNewCommentsRating] = useState('');
-    const commentsRating = useSelector(store => store.commentsRating);
+    // const commentsRating = useSelector(store => store.commentsRating);
 
     function AddingCommentsRating () {
         // Tell redux that we want to add the new element
@@ -33,9 +33,7 @@ function Comments() {
             <div>
                 <h2>Comments</h2>
 
-                <p>Please leave any additional comments: {commentsRating}</p>
-
-                <h2>additional comments:</h2>
+                <h2>Any comments you want to leave?</h2>
                 <input
                     type="text"
                     value={newCommentsRating}

@@ -33,7 +33,6 @@ function Support() {
             <div>
                 <h2>Support</h2>
 
-
                 <h2>How well are you being supported today?</h2>
                 <input
                     type="number"

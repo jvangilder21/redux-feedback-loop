@@ -12,7 +12,7 @@ function Understanding() {
     //Defining a local state to store the user's feeling rating
     const [newUnderstandingRating , setNewUnderstandingRating] = useState('');
 
-    const understandingRating = useSelector(store => store.understandingRating);
+    // const understandingRating = useSelector(store => store.understandingRating);
 
     function AddingUnderstandingRating () {
         // Tell redux that we want to add the new element
@@ -26,18 +26,15 @@ function Understanding() {
         history.push('/support')
     }
     
-    const home = () => {
-        history.push('/')
-    }
+    // const home = () => {
+    //     history.push('/')
+    // }
 
         return(
             <div>
                 <h2>Understanding</h2>
 
-                <p>Understanding Rating: {understandingRating}</p>
-
-                
-                <h2>How well are you Understanding today:</h2>
+                <h2>How well are you understanding the content?</h2>
                 <input
                     type="number"
                     min="1"
@@ -47,10 +44,10 @@ function Understanding() {
                 />
                 
 
-                <Button 
+                {/* <Button 
                     variant='contained'
                     onClick={home}
-                    >HOME</Button>
+                    >HOME</Button> */}
 
                 <Button 
                     variant='contained'
