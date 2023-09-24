@@ -47,6 +47,15 @@ const commentsRating = (state = '', action) => {
     return state;
 }
 
+const reviewRating = (state = '', action) => {
+    console.log("Hey! I'm the comments reducer", state);
+
+    if(action.type === 'ADD_REVIEW_RATING') {
+        return action.payload;
+    }
+    return state;
+}
+
 // Combine Reducers
 const storeInstance = createStore(
     combineReducers({
@@ -54,6 +63,7 @@ const storeInstance = createStore(
       understandingRating,
       supportRating,
       commentsRating,
+      reviewRating
     }),
     applyMiddleware(logger)
   );

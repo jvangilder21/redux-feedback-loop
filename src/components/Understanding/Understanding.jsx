@@ -14,35 +14,57 @@ function Understanding() {
     //Defining a local state to store the user's feeling rating
     const [newUnderstandingRating , setNewUnderstandingRating] = useState('');
 
-    // Don't think this is needed on this page.
     const understandingRating = useSelector(store => store.understandingRating);
 
+    function AddingUnderstandingRating () {
+        // Tell redux that we want to add the new element
+        dispatch({
+            type:'ADD_UNDERSTANDING_RATING',
+            // Pass in the element name, that we're tracking in state
+            payload: newUnderstandingRating,
+        })
+        // clear the form field
+        setNewUnderstandingRating('');
+        history.push('/support')
+    }
     
     const home = () => {
         history.push('/')
     }
-    const support = () => {
-        history.push('/support')
-    }
+    // const support = () => {
+    //     dispatch({ type: 'ADD_UNDERSTANDING_RATING', payload: newUnderstandingRating})
+    //     history.push('/support')
+    // }
 
-    useEffect(() => {
-        fetchUnderstandingRating();
-    }, []);
+    // useEffect(() => {
+    //     fetchUnderstandingRating();
+    // }, []);
 
-    const fetchUnderstandingRating = () => {
-        axios.get('/understanding').then(response => {
-            understandingRating(response.data);
-        }).catch(error => {
-            console.log('error in fetch feelingRating', error);
-            // alert('something went wrong');
-          })
-    }
+    // const fetchUnderstandingRating = () => {
+    //     axios.get('/understanding').then(response => {
+    //         understandingRating(response.data);
+    //     }).catch(error => {
+    //         console.log('error in fetch feelingRating', error);
+    //         // alert('something went wrong');
+    //       })
+    // }
 
         return(
             <div>
                 <h2>Understanding</h2>
 
                 <p>Understanding Rating: {understandingRating}</p>
+
+                
+                <h2>How well are you Understanding today:</h2>
+                <input
+                    type="number"
+                    min="1"
+                    max="5"
+                    value={newUnderstandingRating}
+                    onChange={event => setNewUnderstandingRating(event.target.value)}
+                />
+                
 
                 <Button 
                     variant='contained'
@@ -51,7 +73,7 @@ function Understanding() {
 
                 <Button 
                     variant='contained'
-                    onClick={support}
+                    onClick={AddingUnderstandingRating}
                     >NEXT</Button>
             </div>
         )

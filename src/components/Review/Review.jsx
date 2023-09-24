@@ -15,26 +15,31 @@ function Review() {
 
     const history = useHistory();
     
-    const home = () => {
-        history.push('/')
-    }
-    const review = () => {
-        history.push('/review')
+    // const home = () => {
+    //     history.push('/')
+    // }
+    const review = (event) => {
+        event.preventDefault();
+        const newReview = {
+            feeling: feeling, 
+            understanding: understanding, 
+            support: support,
+            comments: comments
+        }
+        axios.post('/review', newReview)
+        .then(response => {
+            history.push('/')
+            }).catch((error) => {
+                console.log(error);
+            })
+        
     }
 
-    useEffect(() => {
-        fetchReview();
-    }, []);
+    // useEffect(() => {
+    //     fetchReview();
+    // }, []);
 
-    const fetchReview = () => {
-        axios.get('/comments').then(response => {
-            feelingRating(response.data);
-        }).catch(error => {
-            console.log('error in fetch comments Rating', error);
-            // alert('something went wrong');
-          })
-    }
-
+    
     return(
         <div> 
             <h2>Review Your Feedback</h2>
@@ -44,10 +49,10 @@ function Review() {
             <p>Support: {support}</p>
             <p>Comments: {comments}</p>
 
-            <Button 
+            {/* <Button 
                     variant='contained'
                     onClick={home}
-                    >HOME</Button>
+                    >HOME</Button> */}
 
                 <Button 
                     variant='contained'

@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+
 import './App.css';
 
 //Components
@@ -11,8 +11,6 @@ import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 
 // react & redux imports
-import {useDispatch} from 'react-redux';
-import {useEffect} from 'react';
 import {HashRouter as Router, Route, Link, useHistory} from "react-router-dom";
 
 
