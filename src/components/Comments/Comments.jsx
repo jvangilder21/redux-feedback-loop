@@ -25,9 +25,9 @@ function Comments() {
         history.push('/review')
     }
     
-    const home = () => {
-        history.push('/')
-    }
+    // const home = () => {
+    //     history.push('/')
+    // }
 
         return(
             <div>
@@ -40,10 +40,10 @@ function Comments() {
                     onChange={event => setNewCommentsRating(event.target.value)}
                 />
 
-                <Button 
+                {/* <Button 
                     variant='contained'
                     onClick={home}
-                    >HOME</Button>
+                    >HOME</Button> */}
 
                 <Button 
                     variant='contained'
@@ -51,7 +51,6 @@ function Comments() {
                     >NEXT</Button>
             </div>
         )
-
 }
 
 export default Comments;
